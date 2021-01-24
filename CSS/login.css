@@ -1,0 +1,82 @@
+*{
+    font-family: "Open Sans", sans-serif;
+}
+#login{
+    width: 350px;
+    height: 310px;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+    background-color: #F4F4F4;
+}
+#login h1{
+    color: #868787;
+}
+#login input[type=text],
+#login input[type=password] {
+    font-size: 15px;
+    height: 40px;
+    width: 190px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #868787;
+    padding-left: 15px;
+    outline: none;
+}
+#login input[type=text]:hover,
+#login input[type=password]:hover{
+    border-color: #FFD600;
+}
+#login input[type=text]:focus,
+#login input[type=password]:focus{
+    border-color: #FFD600;
+}
+#login button{
+    height: 45px;
+    width: 209px;
+    background-color:#FFD600;
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#login button:hover{
+    background-color:#FFD600;
+    color:#fff;
+    font-size: 22px;
+}
+#login span{
+    font-size: 16px;
+}
+#login a{
+    color: rgb(240, 36, 36);
+    text-decoration: none;
+    font-size: 16px;
+}
+#login input[type=checkbox] {
+    margin-left: -45px;
+    margin-top: 10px;
+}
+#err    {
+    color: rgb(240, 36, 36);
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+#login i {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 111px;
+    right: 87px;
+    z-index: 2;
+    color: #868787;
+}
+#login  {
+    position: relative;
+}

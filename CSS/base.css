@@ -1,0 +1,105 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  /* khai báo biến màu - lúc nào sửa thì sửa tại đây*/
+}
+* {
+  box-sizing: inherit;
+  /* mọi thẻ border bõ đều kế thừa */
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__full-width {
+  width: 100%;
+  /* nếu k muốn width 1200 thì thêm cái này vào */
+}
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+  /* Nếu dài quá thì xuống hàng */
+}
+
+.grid__column2 {           /* lamf category */
+ padding-left: 5px;
+ padding-right: 5px;    
+ width: 16.6667%;
+}
+
+.grid__column3{     /* lam footer */
+ padding-left: 15px;
+ padding-right: 15px;
+ width: 33.3333%;
+}
+.grid__column3_2{     /* lam footer */
+ padding-left: 5px;
+ padding-right: 5px;
+ width: 16.66665%;
+}
+
+.grid__column2_4 {
+ padding-left: 5px;
+ padding-right: 5px;
+ width: 25%;
+}
+
+.grid__column10 {      /* lam product */
+ padding-left: 5px;
+ padding-right: 5px;
+ width: 83.3333%;
+
+}
+
+/* Pagination - đánh số trang */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-left: -10px;
+}
+
+.pagination-item {
+  margin: 0 5px;
+}
+
+.pagination-item__link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #5b5b5b;
+  min-width: 40px;
+  height: 30px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+.pagination-item__link:hover {
+  color: #fed700;
+}
+.pagination-item__link:active {
+  background-color: #fed700;
+}
+
+.pagination-item__icon {
+
+}
+
+
