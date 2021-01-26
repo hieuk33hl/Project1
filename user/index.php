@@ -23,12 +23,12 @@ $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 8;   // số sp
 $current_page = !empty($_GET['page']) ? $_GET['page'] : 1; //Trang hiện tại
 $offset = ($current_page - 1) * $item_per_page;
 if ($search) {
-    $products = mysqli_query($conn, "SELECT * FROM `san_pham` WHERE `ten_sp` LIKE '%" . $search . "%'  " . $orderConditon . " LIMIT " . $item_per_page . " OFFSET " . $offset);
-    $totalRecords = mysqli_query($conn, "SELECT * FROM `san_pham` WHERE `ten_sp` LIKE '%" . $search . "%'");
+    $products = mysqli_query($conn, "SELECT * FROM `san_pham`  WHERE `ten_sp` LIKE '%" . $search . "%'  " . $orderConditon . " LIMIT " . $item_per_page . " OFFSET " . $offset);
+    $totalRecords = mysqli_query($conn, "SELECT * FROM `san_pham`  WHERE `ten_sp` LIKE '%" . $search . "%'");
 } else {
 
     $products = mysqli_query($conn, "SELECT * FROM `san_pham`  " . $orderConditon . "  LIMIT " . $item_per_page . " OFFSET " . $offset);
-    $totalRecords = mysqli_query($conn, "SELECT * FROM `san_pham`");
+    $totalRecords = mysqli_query($conn, "SELECT * FROM `san_pham` ");
 }
 
 $totalRecords = $totalRecords->num_rows;

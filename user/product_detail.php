@@ -50,7 +50,7 @@ include("../Connection/close.php");
 									<?php echo $sp["ten_sp"]; ?>
 								</h1>
 								<h3 class="detail-info__price">
-									<?= number_format($sp['gia_sp'], 0, ",", ".") ?> &nbsp;VNĐ
+									<?= number_format($sp['gia_sp'], 0, ",", ".") ?>&nbsp;VNĐ
 								</h3>
 								<div class="detail-info__size">
 									<span>Chọn size</span> <br>

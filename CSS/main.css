@@ -694,6 +694,7 @@ table td  {
 
   /* product */
 .products {
+  margin-top: 35px;
   margin-bottom: 2px;
 }
 .grid__row__2{
@@ -1423,14 +1424,17 @@ table td  {
   background-color: #F4F4F4;
   border-radius: 5px;
   text-align: center;
+  margin-bottom: 100px;
 }
 .order-list-page h2{
   font-size:20px ;
 }
-
+.order-list-page .bold-text{
+  font-weight: bold;
+}
 .order-list-page table{
   border: 1px solid #d8d8d8;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1438,4 +1442,55 @@ table td  {
 }
 .order-list-page td{
   border: 1px solid #d8d8d8;
+}
+
+
+/* order-list-detail-page */
+.order-list-detail-page{
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+  background-color: #F4F4F4;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.order-list-detail-page .order {
+  width: 50%;
+  text-align: left;
+  margin-left: 20px ;
+  font-size: 17px;
+}
+.order-list-detail-page h2 {
+  font-size:20px ;
+}
+.order-list-detail-page .order td {
+  padding: 5px;
+}
+.order-list-detail-page .lefttd{
+  font-weight: bold;
+  width: 200px;
+  margin-bottom:5px; ;
+}
+
+.order-detail-list  {
+  padding-bottom: 20px;
+}
+.order-detail-list table {
+  font-size: 16px;
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #d8d8d8;
+}
+.order-detail-list td {
+  border: 1px solid #d8d8d8;
+  padding: 3px;
+}
+
+.order-detail-list .tongtien {
+  color:red;
+  font-size: 17px;
+  font-weight: 550;
+}
+.order-detail-list .bold-text{
+  font-weight: bold;
 }

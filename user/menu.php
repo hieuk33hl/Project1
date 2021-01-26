@@ -13,6 +13,7 @@
   <?php
   include("../Connection/open.php");
   $result = mysqli_query($conn, "SELECT * FROM hangsx");
+  // loi tu day ma ra
   include("../Connection/close.php");
   ?>
   <div class="menu_ngang">
