@@ -15,7 +15,7 @@ if (isset($_GET["makh"])  && isset($_GET["ten"]) && isset($_GET["dc"]) && isset(
 	$ngay= $_GET["ngay"];
   //Mở kết nối csdl
   $con = mysqli_connect("localhost", "root", "", "da1");
-  $sql = "INSERT INTO `hoa_don`(`ma_kh`, `ten_nguoi_nhan`, `dia_chi`, `sdt`, `ngay`) VALUES ($makh,'$ten','$dc',$sdt,'$ngay')";
+  $sql = "INSERT INTO `hoa_don`(`ma_kh`, `ten_nguoi_nhan`, `dia_chi`, `sdt`, `ngay_nhap`) VALUES ($makh,'$ten','$dc',$sdt,'$ngay')";
   mysqli_query($con, $sql);
   //Đóng kết nối csdl
   mysqli_close($con);

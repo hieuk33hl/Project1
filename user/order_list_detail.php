@@ -41,11 +41,13 @@ include("../Connection/close.php");
                                     <td class="lefttd">Tình trạng đơn hàng</td>
                                     <td>
                                         <?php if ($row['status_order'] == 0) {  ?>
-                                            <span class="processing" style="color:green; font-weight:bold;">Đang xử lý</span>
+                                            <span class="processing" style="color:green; font-weight:bold;">Đang chờ xử lý</span>
                                         <?php } elseif ($row['status_order'] == 1) { ?>
-                                            <span class="huy" style="color:red;font-weight:bold;">Đã hủy</span>
+                                            <span class="huy" style="color:red;font-weight:bold;">Đang chờ hủy</span>
                                         <?php } elseif ($row['status_order'] == 2) { ?>
                                             <span class="huy" style="color:blue;font-weight:bold;">Đã xác nhận</span>
+                                        <?php } elseif ($row['status_order'] == 3) { ?>
+                                            <span class="huy" style="color:red;font-weight:bold;">Đã hủy</span>
                                         <?php } ?>
                                     </td>
                                 </tr>
@@ -97,11 +99,12 @@ include("../Connection/close.php");
                                             <img src="../upload/<?= preg_replace('/\s+/', '', $list["anh_sp"]) ?>" width="80px">
                                         </td>
                                         <td><span style="text-transform: uppercase;"><?= $list['ten_sp'] ?></span></td>
-                                        <td><?= number_format($list['gia_sp'], 0, ",", ".") ?>&nbsp;VNĐ </td>
-                                        <td><?= $list['sl_sp'] ?></td>
-                                        <td><?= number_format($list['gia_sp'] * $list['sl_sp'], 0, ",", ".") ?>&nbsp;VNĐ</td>
+                                        <td><?= number_format($list['gia_tien'], 0, ",", ".") ?>&nbsp;VNĐ </td>
+                                        <td><?= $list['so_luong'] ?></td>
+                                        <td><?= number_format($list['gia_tien'] * $list['so_luong'], 0, ",", ".") ?>&nbsp;VNĐ</td>
+
                                     </tr>
-                                <?php $total += $list['gia_sp'] * $list['sl_sp'];
+                                <?php $total += ($list['gia_tien'] * $list['so_luong']);
                                 } ?>
                                 <tr>
                                     <td colspan=6></td>

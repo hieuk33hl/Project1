@@ -12,9 +12,10 @@ if (isset($_GET["mahd"]) && isset($_GET["masp"]) && isset($_GET["sl"]) && isset(
 	$masp= $_GET["masp"];
 	$sl= $_GET["sl"];
 	$giatien=$_GET["giatien"];
+	$ngay=$_GET["ngay"];
   //Mở kết nối csdl
   $con = mysqli_connect("localhost", "root", "", "da1");
-  $sql = "INSERT INTO `hoa_don_ct`(`ma_don_hang`, `ma_sp`, `slsp` ,  `gia_tien`) VALUES ($mahd,$masp,$sl,$giatien)";
+  $sql = "INSERT INTO `hoa_don_ct`(`ma_don_hang`, `ma_sp`, `so_luong`, `gia_tien`, `ngay_nhap`) VALUES ($mahd,$masp,$sl,$giatien,'$ngay')";
   mysqli_query($con, $sql);
   //Đóng kết nối csdl
   mysqli_close($con);

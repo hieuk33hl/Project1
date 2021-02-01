@@ -18,6 +18,7 @@
 	  mã sản phẩm: <input type="number" name="masp" required><br>
 	  số lượng <input type="number" name="sl" required><br>
 	   giá tiền  <input type="number" name="giatien" required><br>
+	  ngày nhập  <input type="datetime" name="ngay" required><br>
    <br>
     <input type="submit">
   </form>

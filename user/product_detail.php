@@ -54,9 +54,9 @@ include("../Connection/close.php");
 								</h3>
 								<div class="detail-info__size">
 									<span>Chọn size</span> <br>
-									<?php while ($size = mysqli_fetch_array($result2)) { ?>
-										<input type="radio" name="size" value="<?= $size['size'] ?>"><span id="text-size"><?= $size['size'] ?></span>
-									<?php } ?>
+
+									<input type="radio" name="size" value="<?= $sp['size'] ?>"><span id="text-size"><?= $sp['size'] ?></span>
+
 									<div class="tonkho">
 										<span>Tồn kho:<strong><?= $sp["sl_sp"] ?></strong></span>
 									</div>
@@ -70,7 +70,7 @@ include("../Connection/close.php");
 											<?php if ($sp["sl_sp"] == 0) { ?>
 												<input id="inc" type="text" name="quantity[<?= $sp["ma_sp"] ?>]" value="0" disabled>
 											<?php } else { ?>
-												<input id="inc" type="text" name="quantity[<?= $sp["ma_sp"] ?>]" value="1" min="1" max="10">
+												<input id="inc" type="text" name="quantity[<?= $sp["ma_sp"] ?>]" value="1">
 											<?php }	?>
 										</form>
 										<button onclick=tangsoluong() type="button">
@@ -82,7 +82,7 @@ include("../Connection/close.php");
 
 										function tangsoluong() {
 											var value = parseInt(document.getElementById('inc').value);
-											if (value + 1 <= 10) {
+											if (value + 1 <= <?= $sp["sl_sp"] ?>) {
 												document.getElementById('inc').value = ++i;
 											}
 										}

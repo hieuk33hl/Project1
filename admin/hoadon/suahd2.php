@@ -16,7 +16,7 @@ if (isset($_GET["ma_hd"]) && isset($_GET["makh"])  && isset($_GET["ten"]) && iss
 	$ngay= $_GET["ngay"];
   //Mở kết nối csdl
   $con = mysqli_connect("localhost", "root", "", "da1");
-  $sql = "UPDATE `hoa_don` SET `ma_kh`=$makh,`ten_nguoi_nhan`='$ten',`dia_chi`='$dc',`sdt`=$sdt,`ngay`='$ngay'	 WHERE ma_hd=$ma_hd";
+  $sql = "UPDATE `hoa_don` SET `ma_kh`=$makh,`ten_nguoi_nhan`='$ten',`dia_chi`='$dc',`sdt`=$sdt,`ngay_nhap`='$ngay'	 WHERE ma_hd=$ma_hd";
   mysqli_query($con, $sql);
   //Đóng kết nối csdl
   mysqli_close($con);

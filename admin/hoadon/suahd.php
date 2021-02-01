@@ -21,7 +21,7 @@
 	  tên người nhận:  <input type="text" name="ten" value='<?php echo $hoadon["ten_nguoi_nhan"] ?>' ><br>
 	  địa chỉ: <input type="text" name="dc" value='<?php echo $hoadon["dia_chi"] ?>'><br>
 	    sđt: <input type="number" name="sdt" value='<?php echo $hoadon["sdt"] ?>' ><br>
-	  ngày: <input type="datetime" name="ngay" value='<?php echo $hoadon["ngay"] ?>'><br>
+	  ngày: <input type="datetime" name="ngay" value='<?php echo $hoadon["ngay_nhap"] ?>'><br>
     
     
     <button> Sửa </button>

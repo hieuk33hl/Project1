@@ -28,7 +28,7 @@
                                               echo $_GET["search"];
                                             } ?>">
     <button>Tìm kiếm</button>
-  </form><br><br><br><br>
+  </form>
   <table border="1">
     <tr>
       <th>Mã</th>
@@ -41,6 +41,8 @@
 	  <th>địa chỉ</th>
 	  <th>quyền</th>
 	<th>trạng thái</th>
+		<th></th>
+		<th></th>
     </tr>
     <?php
     while ($admin = mysqli_fetch_array($result)) {
@@ -65,7 +67,8 @@
             } else {
               echo "on";
             } ?></td> 
-		   
+		   <td><a href="../admin/admin/xoaadmin.php?maadmin=<?php echo $admin["maadmin"] ?>" onclick="return confirm('Are u sure?')">Xóa</a></td>
+		   <td><a href="../admin/admin/suaadmin.php?maadmin=<?php echo $admin["maadmin"] ?>">Sửa</a></td>
       </tr>
     <?php
     }

@@ -23,6 +23,7 @@
       <th>Mã sản phẩm</th>
       <th> số lượng </th>
 		<th> giá tiền </th>
+		 <th>ngày</th>
 	  <th></th>
  	  <th></th>
     </tr>
@@ -32,8 +33,9 @@
       <tr>
         <td><?php echo $hoadonct["ma_don_hang"] ?></td>
         <td><?php echo $hoadonct["ma_sp"] ?></td>
-		<td><?php echo $hoadonct["slsp"] ?></td>
+		<td><?php echo $hoadonct["so_luong"] ?></td>
 		  <td><?php echo $hoadonct["gia_tien"] ?></td>
+		  <td><?php echo $hoadonct["ngay_nhap"] ?></td>
 		<td><a href="../admin/hdct/suahdct.php?ma_don_hang=<?php echo $hoadonct["ma_don_hang"] ?>">Sửa</a></td>
 		<td><a href="../admin/hdct/xoahdct.php?ma_don_hang=<?php echo $hoadonct["ma_don_hang"] ?>" onclick="return confirm('Are u sure?')">Xóa</a></td>
       </tr>

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<?php date_default_timezone_set('Asia/Ho_Chi_Minh'); ?>
 	<?php include("header.php"); ?>
 	<?php include("menu.php"); ?>
 
@@ -123,14 +124,14 @@
 							$insertString = "";
 							foreach ($orderProducts as $key => $product) {
 								//INSERT INTO `order_detail` (`id`, `order_id`, `product_id`, `quantity`, `price`, `created_time`, `last_updated`) VALUES (NULL, '29', '2', '1', '123', '123124112', '123124112');
-								$insertString .= "(NULL, '" . $orderID . "', '" . $product['ma_sp'] . "', '" . $_POST['quantity'][$product['ma_sp']] . "', '" . $product['gia_sp'] . "','" . date("Y-m-d H:i:s") . "')";
+								$insertString .= "('" . $orderID . "', '" . $product['ma_sp'] . "', '" . $_POST['quantity'][$product['ma_sp']] . "', '" . $product['gia_sp'] . "')";
 
 								if ($key != count($orderProducts) - 1) {   //nếu key khác count -1 thì thêm dấu phẩy , nếu bằng thì dừng lại vì cuối câu sql k đc có dấu " , "
 									$insertString .= ",";
 								}
 							}
 							//INSERT INTO `hoa_don_ct` (`id`, `ma_don_hang`, `ma_sp`, `so_luong`, `gia_tien`) VALUES (NULL, '9', '29', '12', '12555');
-							$insertOrder = mysqli_query($conn, "INSERT INTO `hoa_don_ct` (`id`, `ma_don_hang`, `ma_sp`, `so_luong`, `gia_tien`, `ngay_nhap`) VALUES " . $insertString . ";");
+							$insertOrder = mysqli_query($conn, "INSERT INTO `hoa_don_ct` (`ma_don_hang`, `ma_sp`, `so_luong`, `gia_tien`) VALUES " . $insertString . ";");
 							$success = "Đặt hàng thành công";
 							unset($_SESSION['cart']);
 						}

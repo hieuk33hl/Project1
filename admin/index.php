@@ -50,24 +50,21 @@
       <ul>
           <li><a href="?cat=1.1">Xem admin</a></li>
 	       <li><a href="?cat=1.2">Thêm admin</a></li>
-		  <li><a href="?cat=1.3">Sửa admin</a></li>
-		  <li><a href="?cat=1.4">Xóa admin</a></li>
+		  <li><a href="?cat=1.3">Xóa - sửa</a></li>
       </ul>
     </li>
 	<li><a href="?cat=2"> Thể loại </a>
 	   <ul>
           <li><a href="?cat=2.1">Xem </a></li>
 	      <li><a href="?cat=2.2">Thêm </a></li>
-		  <li><a href="?cat=2.3">Sửa </a></li>
-		  <li><a href="?cat=2.4">Xóa </a></li>
+		   <li><a href="?cat=2.3">Xóa - sửa</a></li>
 		</ul>
 	</li>
 		<li><a href="?cat=3">Hãng sản xuất</a>
 		<ul>
           <li><a href="?cat=3.1">Xem </a></li>
 	      <li><a href="?cat=3.2">Thêm </a></li>
-		  <li><a href="?cat=3.3">Sửa </a></li>
-		  <li><a href="?cat=3.4">Xóa </a></li>
+			<li><a href="?cat=3.3">Xóa - sửa</a></li>
 		</ul>
 		</li>
 
@@ -75,8 +72,7 @@
 			<ul>
           <li><a href="?cat=4.1">Xem </a></li>
 	      <li><a href="?cat=4.2">Thêm </a></li>
-		  <li><a href="?cat=4.3">Sửa </a></li>
-		  <li><a href="?cat=4.4">Xóa </a></li>
+		  <li><a href="?cat=4.3">Xóa - sửa</a></li>
 		</ul>
 		</li>
 	<li><a href="?cat=5">Khách hàng </a>
@@ -88,6 +84,7 @@
           <li><a href="?cat=6.1">Xem </a></li>
 	      <li><a href="?cat=6.2">Thêm </a></li>
 		  <li><a href="?cat=6.3">Xóa - sửa</a></li>
+			<li><a href="?cat=6.4">tình trạng </a></li>
 		</ul>
 	</li>
 		<li><a href="?cat=7">Hóa đơn chi tết</a>
@@ -121,10 +118,7 @@
       include("../admin/admin/them-admin.php");
         break;
 			case 1.3:
-      include("../admin/admin/sua-admin.php");
-        break;
-			case 1.4:
-      include("../admin/admin/xoa-admin.php");
+      include("../admin/admin/xoa-sua-admin.php");
         break;
 	        case 2.1:
       include("../admin/theloai/xem-tl.php");
@@ -133,10 +127,7 @@
 	  include("../admin/theloai/them-tl.php");
         break;
 			case 2.3:
-	  include("../admin/theloai/sua-tl.php");
-        break;
-			case 2.4:
-	  include("../admin/theloai/xoa-tl.php");
+	  include("../admin/theloai/xoa-sua-tl.php");
         break;
 			case 3.1:
       include("../admin/hangsx/xem-hang.php");
@@ -145,10 +136,7 @@
 	  include("../admin/hangsx/them-hang.php");
         break;
 			case 3.3:
-	  include("../admin/hangsx/sua-hang.php");
-        break;
-			case 3.4:
-	  include("../admin/hangsx/xoa-hang.php");
+	  include("../admin/hangsx/xoa-sua-hang.php");
         break;
 			case 4.1:
 	  include("../admin/sanpham/xem-sp.php");
@@ -157,10 +145,7 @@
 	  include("../admin/sanpham/them-sp.php");
         break;
 			case 4.3:
-	  include("../admin/sanpham/sua-sp.php");
-        break;
-			case 4.4:
-	  include("../admin/sanpham/xoa-sp.php");
+	  include("../admin/sanpham/xoa-sua-sp.php");
         break;
 		case 5.1:
 			include("../admin/khachhang/xem-kh.php");
@@ -176,6 +161,9 @@
 		break;
 			case 6.3:
 			include("../admin/hoadon/xoa-sua-hd.php");
+		break;
+			case 6.4:
+			include("../admin/hoadon/tinh_trang.php");
 		break;
 			case 7.1:
 			include("../admin/hdct/xem-hdct.php");
