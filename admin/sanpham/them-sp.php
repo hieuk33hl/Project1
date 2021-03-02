@@ -4,6 +4,23 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
+	<style>
+		input{
+			height:30px;
+			border-radius: 5px;
+		    font-size: 20px;
+		}
+		button{
+			height:30px;
+			width: 70px;
+			border-radius: 5px;
+		}
+		select{
+			height:30px;
+			border-radius: 5px;
+		    font-size: 20px;
+		}
+	</style>
 
 <body>
 	<?php

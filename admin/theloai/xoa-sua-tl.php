@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
+<style>
+		#l{
+			border-spacing: 0px;
+			text-align: center;
+		}
+	</style>
 
 <body>
 	<?php
@@ -17,7 +23,7 @@
   //Đóng kết nối csdl
   mysqli_close($con);
   ?>
-  <table border="1">
+  <table id="l"  align="center" border="1" >	
     <tr>
       <th>Mã</th>
       <th>Tên</th>

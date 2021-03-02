@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
+	<style>
+		input{
+			height:30px;
+			border-radius: 5px;
+		    font-size: 20px;
+		}
+		button{
+			height:30px;
+			width: 70px;
+			border-radius: 5px;
+		}
+	</style>
 
 <body>
 	<?php
@@ -16,7 +28,7 @@
   ?>
   <form action="suasp2.php" method="post" enctype="multipart/form-data">
 	  
-     <input type="hidden" name="ma_sp" value="<?php echo $ma; ?>"><br>
+    <font size="+3"> <input type="hidden" name="ma_sp" value="<?php echo $ma; ?>"><br>
     Tên: <input type="text" name="ten" value='<?php echo $sanpham["ten_sp"] ?>'><br>
     thể loại: <input type="number" name="tl" value='<?php echo $sanpham["the_loai"] ?>'><br>
 	   hãng: <input type="number" name="hang" value='<?php echo $sanpham["hang_sx"] ?>'><br>
@@ -25,7 +37,7 @@
 	 thông tin: <textarea name="tt" cols="30" rows="10" > <?php echo $sanpham["ttsp"] ?> </textarea><br>
 	  ảnh: <input type="file" name="anh"  value="<?php echo $sanpham["anh_sp"] ?> " alt="hh"  width="100px" height="100px" /><img src="../../upload/<?php echo $sanpham["anh_sp"]; ?> " alt=""  width="100px" height="100px" /> <br>
 	  size: <input type="text" name="size" value='<?php echo $sanpham["size"] ?>'><br>
-	  
+	  </font>
     <button> Sửa </button>
   </form>
 </body>

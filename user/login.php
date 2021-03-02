@@ -35,10 +35,10 @@ if (isset($_SESSION["username"])) {
       <h1>ĐĂNG NHẬP</h1>
       <input type="text" name="username" placeholder="Tên đăng nhập" value="<?php if (isset($_COOKIE["user"])) {
                                                                               echo $username;
-                                                                            } ?>" required>
+                                                                            } ?>" required title="Tên đăng nhập không được để trống">
       <input id="pass" type="password" name="password" placeholder="Mật khẩu" value="<?php if (isset($_COOKIE["user"])) {
                                                                                         echo $password;
-                                                                                      } ?>" required><br>
+                                                                                      } ?>" required title="Mật khẩu không được để trống"><br>
       <i class="far fa-eye" onclick="an_hien_pass()"></i>
       <input type="checkbox" name="remember" <?php if (isset($_COOKIE["user"])) {
                                                 echo "checked";

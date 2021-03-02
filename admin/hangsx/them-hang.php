@@ -4,7 +4,18 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
-
+	<style>
+		input{
+			height:30px;
+			border-radius: 5px;
+		    font-size: 20px;
+		}
+		button{
+			height:30px;
+			width: 70px;
+			border-radius: 5px;
+		}
+	</style>
 <body>
 	<?php
   $con = mysqli_connect("localhost", "root", "", "da1");

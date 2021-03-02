@@ -17,11 +17,10 @@
     <form action="../process/register_process.php" method="POST" id="form">
         <div id="login">
             <h2>ĐĂNG KÍ TÀI KHOẢN</h2>
-            <input type="text" name="fname" placeholder="Họ và tên" id="fullname"> <span id="fullname-err" class="err-notice"></span>
-            <input type="email" name="email" placeholder="Email" id="email"><span id="email-err" class="err-notice"></span>
-            <input type="text" name="pnumber" placeholder="Số điện thoại" id="phone"><span id="phone-err" class="err-notice"></span>
-            <input type="text" name="username" placeholder="Tên đăng nhập" id=""><span id="fullname-err" class="err-notice"></span>
-            <input type="password" name="password" placeholder="Mật khẩu" id="password"><span id="password-err" class="err-notice"></span> <br>
+            <input type="email" name="email" placeholder="Email" id="email"><span id="email-err" class="err-notice" require></span>
+            <input type="text" name="pnumber" placeholder="Số điện thoại" id="phone"><span id="phone-err" class="err-notice" require></span>
+            <input type="text" name="username" placeholder="Tên đăng nhập" id=""><span id="fullname-err" class="err-notice" require></span>
+            <input type="password" name="password" placeholder="Mật khẩu" id="password"><span id="password-err" class="err-notice" require></span> <br>
 
             <?php if (isset($_GET['err'])) { ?>
                 <span class="err" style="color: red;">

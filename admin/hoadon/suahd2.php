@@ -7,22 +7,24 @@
 
 <body>
 	<?php
-if (isset($_GET["ma_hd"]) && isset($_GET["makh"])  && isset($_GET["ten"]) && isset($_GET["dc"]) && isset($_GET["sdt"]) && isset($_GET["ngay"])) {
+if (isset($_GET["ma_hd"]) && isset($_GET["makh"])  && isset($_GET["ten"]) && isset($_GET["dc"]) && isset($_GET["sdt"]) && isset($_GET["email"]) && isset($_GET["tt"]) && isset($_GET["ngay"])) {
 	$ma_hd= $_GET["ma_hd"];
 	$makh= $_GET["makh"];
 	$ten= $_GET["ten"];
 	$sdt= $_GET["sdt"];
+	$email=$_GET["email"];
+	$ghichu=$_GET["tt"];
 	$dc= $_GET["dc"];
 	$ngay= $_GET["ngay"];
   //Mở kết nối csdl
   $con = mysqli_connect("localhost", "root", "", "da1");
-  $sql = "UPDATE `hoa_don` SET `ma_kh`=$makh,`ten_nguoi_nhan`='$ten',`dia_chi`='$dc',`sdt`=$sdt,`ngay_nhap`='$ngay'	 WHERE ma_hd=$ma_hd";
+  $sql = "UPDATE `hoa_don` SET `ma_kh`=$makh,`ten_nguoi_nhan`='$ten',`dia_chi`='$dc',`sdt`=$sdt, `ghi_chu`='$ghichu' , `email`='$email ',`ngay_nhap`='$ngay'	 WHERE ma_hd=$ma_hd";
   mysqli_query($con, $sql);
   //Đóng kết nối csdl
   mysqli_close($con);
   header("Location: xem-hd.php");
 } else {
-  header("Location: xoa-sua-hd.php");
+ header("Location: xoa-sua-hd.php");
 }?>
 </body>
 </html>

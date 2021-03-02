@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
+	<style>
+		
+		button{
+			height:30px;
+			width: 70px;
+			border-radius: 5px;
+		}
+	</style>
 
 <body>
 	<?php

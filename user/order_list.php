@@ -2,7 +2,7 @@
 <?php
 include("../Connection/open.php");
 $id_cus = $_SESSION['id_customer'];
-$item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 3;   // số sp 1 trang
+$item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 5;   // số sp 1 trang
 $current_page = !empty($_GET['page']) ? $_GET['page'] : 1; //Trang hiện tại
 $offset = ($current_page - 1) * $item_per_page;
 $orderObj = mysqli_query($conn, "SELECT * FROM hoa_don INNER JOIN khach_hang on hoa_don.ma_kh = khach_hang.ma_kh where hoa_don.ma_kh = '$id_cus' ORDER BY `hoa_don`.`ma_hd` DESC LIMIT  " . $item_per_page . " OFFSET " . $offset . "");
@@ -48,7 +48,6 @@ include("../Connection/close.php");
                                 <td class="bold-text">Ngày đặt</td>
                                 <td class="bold-text">Chi tiết</td>
                                 <td class="bold-text">Tình trạng</td>
-                                <td class="bold-text">Hủy đơn</td>
                             </tr>
 
                             <?php $num = 1; ?>
@@ -67,22 +66,10 @@ include("../Connection/close.php");
                                         <?php if ($row['status_order'] == 0) {  ?>
                                             <span class="processing" style="color:green;">Đang chờ xử lý</span>
                                         <?php } elseif ($row['status_order'] == 1) { ?>
-                                            <span class="huy" style="color:red;">Đang chờ hủy</span>
+                                            <span class="huy" style="color:red;">Đã hủy</span>
                                         <?php } elseif ($row['status_order'] == 2) { ?>
                                             <span class="huy" style="color:blue;">Đã xác nhận</span>
-                                        <?php } elseif ($row['status_order'] == 3) { ?>
-                                            <span class="huy" style="color:red;">Đã hủy</span>
                                         <?php } ?>
-                                    </td>
-                                    <td>
-                                        <?php if ($row['status_order'] == 2) { ?>
-                                            <span class="huy" style="color:blue;">Đã xác nhận nên không thể hủy</span>
-                                        <?php  } elseif ($row['status_order'] == 0) { ?>
-                                            <a href="../process/huy_don.php?order_id=<?= $row['ma_hd']; ?>" onclick="return confirm(" Bạn có muốn hủy dơn hàng này không ")" style="color:red;">Hủy</a>
-                                        <?php } elseif ($row['status_order'] == 3) { ?>
-                                            <span class="huy" style="color:red;">Đã hủy</span>
-                                        <?php } ?>
-
                                     </td>
                                 </tr>
                             <?php

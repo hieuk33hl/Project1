@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
+	<style>
+		#l{
+			border-spacing: 0px;
+			text-align: center;
+		}
+	</style>
+
 
 <body>
 	<?php
@@ -24,9 +31,9 @@
     <input type="text" name="search" value="<?php if (isset($_GET["search"])) {
                                               echo $_GET["search"];
                                             } ?>">
-    <button>Tìm kiếm</button>
+    <button>Tìm kiếm</button><br><br>
   </form>
-  <table border="1">
+  <table id="l"  align="center" border="1" >
     <tr>
       <th>Mã</th>
       <th>Tên</th>

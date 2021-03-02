@@ -8,8 +8,8 @@ if (isset($_GET["mahd"])) {
 
   mysqli_close($con);
 
-  header("Location: tinh_trang.php");
+  header("Location: ../index.php?cat=6.4");
 } else {
 
-  header("Location:tinh_trang.php");
+  header("Location: ../index.php?cat=6.4");
 }

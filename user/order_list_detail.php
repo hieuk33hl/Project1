@@ -43,12 +43,10 @@ include("../Connection/close.php");
                                         <?php if ($row['status_order'] == 0) {  ?>
                                             <span class="processing" style="color:green; font-weight:bold;">Đang chờ xử lý</span>
                                         <?php } elseif ($row['status_order'] == 1) { ?>
-                                            <span class="huy" style="color:red;font-weight:bold;">Đang chờ hủy</span>
+                                            <span class="huy" style="color:red;font-weight:bold;">Đã hủy</span>
                                         <?php } elseif ($row['status_order'] == 2) { ?>
                                             <span class="huy" style="color:blue;font-weight:bold;">Đã xác nhận</span>
-                                        <?php } elseif ($row['status_order'] == 3) { ?>
-                                            <span class="huy" style="color:red;font-weight:bold;">Đã hủy</span>
-                                        <?php } ?>
+                                        <?php }  ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -110,6 +108,13 @@ include("../Connection/close.php");
                                     <td colspan=6></td>
                                     <td>Tổng tiền: <span class="tongtien"><?= number_format($total, 0, ",", ".") ?>&nbsp;VNĐ</span></td>
                                 </tr>
+                                <?php if ($row['status_order'] == 0) { ?>
+                                    <tr>
+                                        <td colspan=6></td>
+                                        <td><a href="../process/huy_don.php?order_id=<?= $row['ma_hd']; ?>" onclick="return confirm(" Bạn có muốn hủy dơn hàng này không ")" style="color:red;">Hủy đơn hàng này</a></td>
+                                    </tr>
+                                <?php } ?>
+
                             </table>
                         </div>
 
