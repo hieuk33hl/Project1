@@ -17,11 +17,13 @@ if (isset($_GET["mahd"])) {
     $sqlSanPham = "SELECT * FROM san_pham WHERE ma_sp=$maSanPham";
     $resultSanPham = mysqli_query($con, $sqlSanPham);
     $sanPham = mysqli_fetch_array($resultSanPham);
-    $soLuongBanDau = $sanPham["so_luong"];
+    $soLuongBanDau = $sanPham["sl_sp"];
     // Số lượng update = số lượng sản phẩm + số lượng đã đặt
     $soLuongHienTai = $soLuongBanDau + $soLuongHoaDon;
     // Update Sản phẩm
     $sqlUpdateSanPham = "UPDATE san_pham SET sl_sp=$soLuongHienTai WHERE ma_sp=$maSanPham";
+    var_dump($sqlUpdateSanPham);
+    exit;
     mysqli_query($con, $sqlUpdateSanPham);
   }
   mysqli_close($con);
