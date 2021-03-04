@@ -35,11 +35,11 @@
       <td>Tình trạng đơn hàng</td>
       <td>
         <?php if ($hoadonct['status_order'] == 0) {  ?>
-          <span class="processing" style="color:green;">Đang chờ xử lý</span>
+          <span class="processing" style="color:green;font-weight: bold; ">Đang chờ xử lý</span>
         <?php } elseif ($hoadonct['status_order'] == 1) { ?>
-          <span class="huy" style="color:red;">Đã hủy</span>
+          <span class="huy" style="color:red;font-weight: bold;">Đã hủy</span>
         <?php } elseif ($hoadonct['status_order'] == 2) { ?>
-          <span class="huy" style="color:blue;">Đã xác nhận</span>
+          <span class="huy" style="color:blue;font-weight: bold;">Đã xác nhận</span>
         <?php } ?>
       </td>
     </tr>
@@ -97,10 +97,16 @@
     <?php if ($hoadonct['status_order'] == 0) { ?>
       <tr align="center">
         <td colspan=6></td>
-        <td><a href="hoadon/huy-hoa-don.php?mahd=<?= $hoadonct['ma_hd']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');" style="color:red;">Hủy đơn hàng này</a></td>
+        <td>
+          <a href="hoadon/huy-hoa-don.php?mahd=<?= $hoadonct['ma_hd']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');" style="color:red;">Hủy đơn hàng này</a>
+          <br>
+          <a href="hoadon/duyet-hoa-don.php?mahd=<?php echo $hoadonct["ma_hd"]; ?>">Duyệt hóa đơn</a>
+        </td>
       </tr>
     <?php } ?>
   </table>
+
+  <a href="index.php?cat=6.1">Back</a>
 </body>
 
 </html>
