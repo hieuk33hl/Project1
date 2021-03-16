@@ -248,7 +248,7 @@
 							</td>
 							<td class="right_td">
 								<label>Số điện thoại</label>
-								<input type="text" placeholder="Số điện thoại" class="form-control" name="sdt">
+								<input type="text" placeholder="Số điện thoại" class="form-control" name="sdt" pattern="[0-9]{10}" title="Số điện thoại phải nhập đúng định dạng">
 							</td>
 						</tr>
 						<tr>

@@ -40,7 +40,7 @@
   //Đóng kết nối csdl
   mysqli_close($con);
   ?>
-  <form action="../admin/sanpham/danh-sach-sp.php" method="get">
+  <form action="../admin/sanpham/xem-sp.php" method="get">
     <input type="text" name="search" value="<?php if (isset($_GET["search"])) {
                                               echo $_GET["search"];
                                             } ?>">
@@ -50,15 +50,15 @@
     <tr>
       <th>Mã</th>
       <th>Tên</th>
-      <th>thể loai</th>
+      <th>thể loại</th>
       <th>hãng sản xuất</th>
       <th>số lượng sản phẩm</th>
       <th>giá sản phẩm</th>
       <th>ttsp</th>
       <th>ảnh </th>
       <th>size</th>
-      <th></th>
-      <th></th>
+	  <th colspan="2">Thao tác</th>
+
     </tr>
     <?php
     while ($sanpham = mysqli_fetch_array($result)) {
@@ -74,23 +74,22 @@
         <td><img src="../upload/<?= preg_replace('/\s+/', '', $sanpham["anh_sp"]) ?> " width="100px" height="100px" /></td>
         <td><?php echo $sanpham["size"] ?></td>
         <td><a href="../admin/sanpham/xoasp.php?ma_sp=<?php echo $sanpham["ma_sp"] ?>" onclick="return confirm('Are u sure?')">Xóa</a></td>
-        <td><a href="../admin/sanpham/suasp.php?ma_sp=<?php echo $sanpham["ma_sp"] ?>">Sửa</a></td>
+		<td><a href="../admin/sanpham/suasp.php?ma_sp=<?php echo $sanpham["ma_sp"] ?>">Sửa</a></td>
       </tr>
 
     <?php
     }
+
     ?>
 
-
-  </table><br><br>
-
-  <?php
-  for ($i = 1; $i <= $tongTrang; $i++) {
+  </table> <br>
+  <?php for ($i = 1; $i <= $tongTrang; $i++) {
   ?>
     &ensp; <a href="?cat=<?php echo $cat; ?>&trang=<?php echo $i; ?>"><?php echo $i; ?></a>
   <?php
   }
   ?>
+
   <br><br>
   <a href="../index.php"> Back </a>
 </body>

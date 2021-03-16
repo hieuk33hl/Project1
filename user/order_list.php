@@ -37,6 +37,7 @@ include("../Connection/close.php");
                 <div class="grid__column11">
                     <div class="order-list-page">
                         <h2>Danh sách đơn hàng</h2>
+
                         <table cellspacing="0" cellpadding="0">
                             <tr align="center">
                                 <td class="bold-text">STT</td>

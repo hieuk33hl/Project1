@@ -111,10 +111,10 @@ include("../Connection/close.php");
                                 <?php if ($row['status_order'] == 0) { ?>
                                     <tr>
                                         <td colspan=6></td>
-                                        <td><a href="../process/huy_don.php?order_id=<?= $row['ma_hd']; ?>" onclick="return confirm(" Bạn có muốn hủy dơn hàng này không ")" style="color:red;">Hủy đơn hàng này</a></td>
+                                        <td><a href="../process/huy_don.php?order_id=<?= $row['ma_hd']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');" style="color:red;">Hủy đơn hàng này</a></td>
                                     </tr>
                                 <?php } ?>
-
+                                onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');"
                             </table>
                         </div>
 

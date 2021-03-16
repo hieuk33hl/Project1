@@ -23,8 +23,9 @@ if (isset($_GET['order_id'])) {
         $sqlUpdateSanPham = "UPDATE san_pham SET sl_sp=$soLuongHienTai WHERE ma_sp=$maSanPham";
         mysqli_query($conn, $sqlUpdateSanPham);
     }
-    include("../Connection/close.php");
+
     header('location:../user/order_list.php');
 } else {
     header('location:../user/order_list.php?err=1');
 }
+include("../Connection/close.php");
