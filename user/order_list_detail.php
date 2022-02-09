@@ -114,7 +114,6 @@ include("../Connection/close.php");
                                         <td><a href="../process/huy_don.php?order_id=<?= $row['ma_hd']; ?>" onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');" style="color:red;">Hủy đơn hàng này</a></td>
                                     </tr>
                                 <?php } ?>
-                                onclick="return confirm('Bạn có muốn hủy đơn hàng này không?');"
                             </table>
                         </div>
 
